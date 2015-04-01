@@ -20,15 +20,18 @@ public class AngryProf {
    	System.out.print("Enter students required by prof ");
    	n = sc.nextInt();
    	System.out.print("Enter time of students ");
-   		for(int j = 0; j <= k ; j++)
+   		for(int j = 0; j < k ; j++)
    		{
    			time[j] = sc.nextInt();		
-   		}
+      }   		
 
-   		if(time[i] > 0 && time[i] == 0)
+      for ( int m=0;m<k;m++)
+      {
+   		 if(time[m] < 0 || time[m] == 0)
    			{
    				cnt++;
    			}
+      }
    			if(cnt >= n)
    			{
    				System.out.print("Lecture will not be cancelled..");
@@ -37,7 +40,6 @@ public class AngryProf {
    			{
    				System.out.print("cancelled..");
    			}
-
     }
 
 	}
